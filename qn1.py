@@ -2,13 +2,14 @@ import random
 
 def generate_kitchen_description(cuisine, cooking_style, specialization):
     templates = [
-        "This kitchen specializes in {} dishes with a focus on {}.",
-        "Known for their authentic {} specials, this kitchen delivers a unique culinary experience.",
-        "If you crave {}, this kitchen is the place to go. Expertise in {} cooking style."
+        "If you're craving {}, this kitchen is renowned for its {} dishes, prepared with a focus on {}.",
+        "Discover the culinary delights of {} cuisine at this kitchen, where {} dishes are expertly crafted in a {} style.",
+        "Savor the authentic flavors of {} with a diverse menu of {} dishes, each showcasing the kitchen's mastery of {}.",
+        "Immerse yourself in the world of {} cuisine, where every {} dish is a testament to the kitchen's dedication to {}.",
+        "Experience the artistry of {} cooking with a selection of {} dishes that highlight the kitchen's expertise in {}.",
     ]
-
-    description_template = random.choice(templates)
-    return description_template.format(cuisine, cooking_style, specialization)
+    template = random.choice(templates)
+    return template.format(cuisine, cooking_style, specialization)
 
 # Get input from the user
 cuisine = input("Enter the cuisine: ")
